@@ -4,7 +4,7 @@ CREATE TABLE `pending_transactions` (
   `service` varchar(20) COLLATE utf8_bin NOT NULL,
   `method` varchar(20) COLLATE utf8_bin NOT NULL,
   `h_server_id` int(11) NOT NULL,
-  `timeout` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `timeout` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `transactionID` (`transactionID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
